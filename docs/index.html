@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="../src/output.css" rel="stylesheet">
+    <title>Explore</title>
+</head>
+<body class="h-screen ">
+    <div id="home" class="h-screen relative z-0 bg-PrimaryBg"></div>
+    <div id="hero" class="flex items-center justify-center h-screen w-screen absolute top-0 z-20 bg-PrimaryBg overflow-hidden">
+        <div class="absolute   top-0 z-30  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500   h-96 w-96 rounded-full blur-4xl animate-complexMove"></div>
+        <div class="absolute -left-28 -bottom-28 z-30  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-4xl h-64 w-64 rounded-full animate-random-rotate"></div>
+        <h1 class="text-indigo-950 text-3xl w-11/12 md:w-8/12 md:text-5xl lg:text-7xl lg:w-4/6 font-semibold  text-center">Your Gateway to Coding <span class="text-indigo-800">Success</span></h1>
+    </div>
+
+    <!-- w-4/6 -->
+    <!-- text-4xl -->
+    <button id="explore" class=" absolute flex z-40 h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-ful bottom-10 right-10 md:bottom-20 md:right-20 animate-pulse">
+        <span class="animate-ping absolute h-full w-full rounded-full bg-BtnColor opacity-75"></span>
+        <span class="flex items-center justify-center text-center relative rounded-full h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 bg-BtnColor text-slate-50 text-sm md:text-base lg:text-lg font-semibold">Explore</span>
+    </button>
+
+    
+    <script>
+        $(document).ready(function(){
+            $('#explore').on('click', function(){
+                $('#hero').slideUp(550)
+                $('#explore').hide()
+            })
+            $('#explore').scroll( function(){
+                $('#hero').slideUp(550)
+                $('#explore').hide()
+            })
+        })
+    </script>
+</body>
+</html>
